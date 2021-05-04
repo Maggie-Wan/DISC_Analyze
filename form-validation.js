@@ -13,12 +13,8 @@
           event.preventDefault()
           event.stopPropagation()
         }
-  		var A1=parseInt(document.getElementById("1A").value,10); 
-  		var A2=parseInt(document.getElementById("2A").value,10); 
-  		alert(A1+A2);
-        form.classList.add('was-validated')
+       
       }, false)
     })
-    
-
-})()
+}
+)()
