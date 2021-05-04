@@ -46,15 +46,15 @@ function calculate_results() {
 
     if (O > G) { 
         if (D > I) { //O & D
-            alert("you are I");
+            alert("您是I型人格");
         } else { //O & I
-            alert("you are S");
+            alert("您是S型人格");
         }
     } else {
         if (D > I) { //G & D
-            alert("you are D");
+            alert("您是D型人格");
         } else { // G & I
-            alert("you are C");
+            alert("您是C型人格");
         }
     }
 
