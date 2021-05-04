@@ -46,15 +46,15 @@ function calculate_results() {
 
     if (O > G) { 
         if (D > I) { //O & D
-            alert("±z¬OI«¬¤H®æ!");
+            alert("æ‚¨æ˜¯Iåž‹äººæ ¼!");
         } else { //O & I
-            alert("±z¬OS«¬¤H®æ!");
+            alert("æ‚¨æ˜¯Såž‹äººæ ¼!");
         }
     } else {
         if (D > I) { //G & D
-            alert("±z¬OD«¬¤H®æ!");
+            alert("æ‚¨æ˜¯Dåž‹äººæ ¼!");
         } else { // G & I
-            alert("±z¬OC«¬¤H®æ!");
+            alert("æ‚¨æ˜¯Cåž‹äººæ ¼!");
         }
     }
 
