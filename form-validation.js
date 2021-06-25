@@ -9,10 +9,10 @@
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
       form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
+        //if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
-        }
+        //}
        
       }, false)
     })

@@ -1,6 +1,7 @@
 ﻿<!doctype html>
 <meta http-equiv="Content-Type" content="text/html; charset=big5" />
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,9 +11,6 @@
     <title>DISC人格類型分析</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
-
-
-
     <!-- Bootstrap core CSS -->
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -473,7 +471,17 @@
                             </div>
                         </div>
                         <hr class="my-4">
-                        <button class="w-100 btn btn-primary btn-lg" type="submit" id="calculate">計算結果</button>
+                        <div class="row g-3">
+                            <div class="col-sm-2">
+                                <label for="fname" class="form-label">請輸入您的姓名</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input class="w-100" type="text" id="fname" placeholder="" value="">
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="w-100 btn btn-primary btn-sm" type="button" id="calculate">紀錄並計算結果</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -487,13 +495,68 @@
 
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+
     <script src="form-validation.js"></script>
-    <script type="text/javascript" src="calculation.js"></script>
-    <script type="text/javascript">
-        document.getElementById('calculate').onclick = function () {
-            var fun = calculate_results; //引用abc函式
-            fun();
+    <script src="calculation.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCZMraDgFr69cDIZBvNUH5UHFpgQhKcbV4",
+            authDomain: "disc-aec21.firebaseapp.com",
+            projectId: "disc-aec21",
+            databaseURL: "https://disc-aec21-default-rtdb.firebaseio.com/",
+            storageBucket: "disc-aec21.appspot.com",
+            messagingSenderId: "992599114273",
+            appId: "1:992599114273:web:57bd6329839af0c8dc9960",
+            measurementId: "G-V336BWB6CE"
         };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+
+        // Get a reference to the database service
+        var database = firebase.database();
+        function writeUserData(name, test_date, disc_result) {
+            firebase.database().ref('users/' + test_date).set({
+                username: name,
+                result: disc_result
+            });
+        }
+        var result = "";
+
+
+        document.getElementById('calculate').onclick = function () {
+
+            var name = document.getElementById("fname").value;
+            if (name == null || name == "") {
+                alert("送出前請輸入姓名以便紀錄分析結果");
+                return;
+            }
+            var today = new Date();
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + " " + today.getHours() + ":"
+                + today.getMinutes() + ":"
+                + today.getSeconds();
+            var fun = calculate_results; //引用abc函式
+            result = fun();
+            writeUserData(name, date, result);
+        };
+
+
     </script>
 
 </body>

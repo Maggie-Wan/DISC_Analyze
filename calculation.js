@@ -42,21 +42,27 @@ function calculate_results() {
     var G = B1 + A3 + B5 + A7 + B9 + A11 + B13 + A15 + B17;
     var D = B2 + A4 + B6 + A8 + B10 + A12 + B14 + A16 + B18;
     var I = A2 + B4 + A6 + B8 + A10 + B12 + A14 + B16 + A18;
-		alert("o:"+O+" G:"+G+" D:"+D+" I:"+I);
-
+		//alert("o:"+O+" G:"+G+" D:"+D+" I:"+I);
+		var result;
     if (O > G) { 
         if (D > I) { //O & D
             alert("您是I型人格!");
+            result="I型人格"
         } else { //O & I
             alert("您是S型人格!");
+            result="S型人格"
         }
     } else {
         if (D > I) { //G & D
             alert("您是D型人格!");
+            result="D型人格"
         } else { // G & I
             alert("您是C型人格!");
+            result="C型人格"
         }
     }
-
-
+    
+    return result;
 }
+
+   
