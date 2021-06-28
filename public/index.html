@@ -531,10 +531,14 @@
 
         // Get a reference to the database service
         var database = firebase.database();
-        function writeUserData(name, test_date, disc_result) {
-            firebase.database().ref('users/' + test_date).set({
+        function writeUserData(name, test_date, disc_result, O, G, D, I) {
+            firebase.database().ref('interviewee/' + test_date).set({
                 username: name,
-                result: disc_result
+                result: disc_result,
+                O總分: O,
+                G總分: G,
+                D總分: D,
+                I總分: I
             });
         }
         var result = "";
@@ -552,8 +556,15 @@
                 + today.getMinutes() + ":"
                 + today.getSeconds();
             var fun = calculate_results; //引用abc函式
-            result = fun();
-            writeUserData(name, date, result);
+            result = fun().split(',');
+            console.log(result);
+            var disc_result = result[0];
+            var O = result[1];
+            var G = result[2];
+            var D = result[3];
+            var I = result[4];
+            console.log(disc_result + ":" + O + G + D + I);
+            writeUserData(name, date, disc_result, O, G, D, I);
         };
 
 

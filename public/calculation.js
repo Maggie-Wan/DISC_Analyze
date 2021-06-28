@@ -47,18 +47,18 @@ function calculate_results() {
     if (O > G) { 
         if (D > I) { //O & D
             alert("您是I型人格!");
-            result="I型人格"
+            result="I型人格,"+O+","+G+","+D+","+I;
         } else { //O & I
             alert("您是S型人格!");
-            result="S型人格"
+            result="S型人格,"+O+","+G+","+D+","+I;
         }
-    } else {
+    } else{
         if (D > I) { //G & D
             alert("您是D型人格!");
-            result="D型人格"
+            result="D型人格,"+O+","+G+","+D+","+I;
         } else { // G & I
             alert("您是C型人格!");
-            result="C型人格"
+            result="C型人格,"+O+","+G+","+D+","+I;
         }
     }
     
