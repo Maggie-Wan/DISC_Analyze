@@ -1,0 +1,563 @@
+﻿<!doctype html>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.82.0">
+    <title>DISC人格類型分析</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+    <!-- Bootstrap core CSS -->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+
+
+</head>
+<body class="bg-light">
+
+    <div class="container">
+        <main>
+            <div class="py-5" align-self-start>
+                <img class="d-block mx-auto mb-4" src="assets/brand/emotions.png" alt="" width="57" height="62">
+                <h2 class="text-center text-primary">辨識你的DISC人格類型</h2>
+                <br>
+                <p class="lead text-left">
+                    以下兩兩一組的敘述中，請在兩種反應（A 和 B）中選擇最接近自己反應的選項，雖然有時兩種情況都會發生，但請你在最能代表自己大多時候的行為特徵上，填下較多的分數。例如：<br>
+                    <br>
+                    •	如果 A 項是你的典型行為，請在 A 項填 3 分，B 項填 0 分。<br>
+                    •	如果兩種行為相較，你較常表現出 A 的行為，請在 A 項填 2 分，B 項填 1 分。<br>
+                    •	如果 B 項是你的最佳寫照，請在 B 項填 3 分，A 項填 0 分。<br>
+                    •	如果你平日表現的反應是 B 比 A 多，請在 B 項填 2 分，A 項填 1 分。<br>
+                </p>
+                <br />
+                <p class="lead text-left">
+                    完成以下 18 道的問答之後，請憑直覺依你真實的自己作答，而不是根據你理想中的自己或別人認為的你填寫，不要深思或分析。謹記：每一組的總分加起來一定要等於 3 分。
+                </p>
+            </div>
+
+            <div class="row g-5">
+
+                <!--col-lg-8間隔-->
+                <div class="col-md-12 col-lg-12">
+                    <h4 class="mb-3">測驗題目</h4>
+                    <br />
+                    <form class="needs-validation" novalidate>
+                        <div class="row g-2">
+                            <div class="col-sm-11">
+                                <label for="1A" class="form-label">1A.我是真心想瞭解別人，並建立友誼。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="1A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="1B" class="form-label">1B.我通常不會開放心胸去瞭解別人，並與他們建立友誼。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="1B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="2A" class="form-label">2A.我反應較慢而且會深思熟慮。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="2A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="2B" class="form-label">2B.我反應迅速而且是自動自發的。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="2B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="3A" class="form-label">3A.對於別人佔用我的時間，我抱持審慎的態度。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="3A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="3B" class="form-label">3B.對於別人佔用我的時間，我總是盡量配合。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="3B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="4A" class="form-label">4A.在社交場合中，我總會主動自我介紹。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="4A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="4B" class="form-label">4B.在社交場合中，我總是等著別人走過來，向我介紹他們自己。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="4B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="5A" class="form-label">
+                                    5A.與他人交談時，我通常把談話的焦點放在對方身上，雖然有時與原來的主題不甚相關，我也不以為意。
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="5A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="5B" class="form-label">5B.與他人交談時，我通常把談話的主題，放在工作、議題或其他事物上。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="5B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="6A" class="form-label">
+                                    6A.我通常有點猶豫不決，而且對緩慢的節奏有耐心。
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="6A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="6B" class="form-label">6B.我通常十分果決，而且對緩慢的節奏沒什麼耐性。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="6B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="7A" class="form-label">
+                                    7A.我通常依事實或證據來決定事情。
+                                </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="7A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="7B" class="form-label">7B.我通常靠感覺或經驗來決定事情。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="7B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="8A" class="form-label">8A.我喜歡參與團體討論。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="8A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="8B" class="form-label">8B.我不喜歡參與團體討論。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="8B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="9A" class="form-label">9A.我通常願意和別人共事，並在可能時提供協助。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="9A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="9B" class="form-label">9B.我通常喜歡獨立完成一項工作，即使是團隊的工作，我也希望自己完成自己的部分。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="9B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="10A" class="form-label">10A.我通常會問問題，或試探性、委婉地發表意見。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="10A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="10B" class="form-label">10B.我通常會做出直接了當的陳述，或直接表達出我的意見。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="10B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="11A" class="form-label">11A.我主要著重在主意、觀念及成果上。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="11A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="11B" class="form-label">11B.我主要著重在人、互動及感覺上。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="11B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="12A" class="form-label">12A.我使用手勢、臉部表情或抑揚頓挫，來強調我說話的重點。 </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="12A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="12B" class="form-label">12B.我不使用手勢、臉部表情或抑揚頓挫，來強調我說話的重點。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="12B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="13A" class="form-label">13A.我通常會接受別人的觀點（包括主意、感覺及顧慮）。  </label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="13A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="13B" class="form-label">13B.我通常不會接受別人的觀點（包括主意、感覺及顧慮）。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="13B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="14A" class="form-label">14A.我通常只在審慎評估後及可預測狀況下，才會冒險及做出改變。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="14A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="14B" class="form-label">14B.我通常會在充滿活力及未知的狀況下，勇於冒險並做出改變。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="14B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="15A" class="form-label">15A.我通常會保有個人的感覺及看法，只有在我願意時，才會與人分享。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="15A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="15B" class="form-label">15B.我常將與別人分享及討論我的感覺，視為輕鬆自在的事。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="15B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="16A" class="form-label">16A.我通常會尋求嶄新或不同的經驗及狀況。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="16A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="16B" class="form-label">16B.我通常會選擇已知或熟稔的狀況。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="16B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="17A" class="form-label">17A.對別人提出的議題、興趣及關心的事物，我通常會有所反應。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="17A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="17B" class="form-label">17B.我只對自己的議題、興趣及關心的事物有興趣。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="17B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="18A" class="form-label">18A.我對別人和我之間人際關係的衝突反應，是緩慢而且不直接的。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="18A" required>
+                                    <option value="3" selected>3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-11">
+                                <label for="18B" class="form-label">18B.我對別人和我之間人際關係的衝突反應，是迅速而且直接的。</label>
+                            </div>
+                            <div class="col-sm-1">
+                                <select class="form-select form-select-sm" id="18B" required>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0" selected>0</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <div class="row g-3">
+                            <div class="col-sm-2">
+                                <label for="fname" class="form-label">請輸入您的姓名</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input class="w-100" type="text" id="fname" placeholder="" value="">
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="w-100 btn btn-primary btn-sm" type="button" id="calculate">紀錄並計算結果</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; 2021–2031 Maggie Wan</p>
+        </footer>
+    </div>
+
+
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+
+    <script src="form-validation.js"></script>
+    <script src="calculation.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCZMraDgFr69cDIZBvNUH5UHFpgQhKcbV4",
+            authDomain: "disc-aec21.firebaseapp.com",
+            projectId: "disc-aec21",
+            databaseURL: "https://disc-aec21-default-rtdb.firebaseio.com/",
+            storageBucket: "disc-aec21.appspot.com",
+            messagingSenderId: "992599114273",
+            appId: "1:992599114273:web:57bd6329839af0c8dc9960",
+            measurementId: "G-V336BWB6CE"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+
+        // Get a reference to the database service
+        var database = firebase.database();
+        function writeUserData(name, test_date, disc_result) {
+            firebase.database().ref('users/' + test_date).set({
+                username: name,
+                result: disc_result
+            });
+        }
+        var result = "";
+
+
+        document.getElementById('calculate').onclick = function () {
+
+            var name = document.getElementById("fname").value;
+            if (name == null || name == "") {
+                alert("送出前請輸入姓名以便紀錄分析結果");
+                return;
+            }
+            var today = new Date();
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + " " + today.getHours() + ":"
+                + today.getMinutes() + ":"
+                + today.getSeconds();
+            var fun = calculate_results; //引用abc函式
+            result = fun();
+            writeUserData(name, date, result);
+        };
+
+
+    </script>
+
+</body>
+</html>
